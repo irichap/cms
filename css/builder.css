@@ -1,0 +1,46 @@
+/* Builder canvas & blocks */
+
+#canvas {
+  min-height: 400px;
+  border: 2px dashed #adb5bd;
+  padding: 10px;
+  background: #fff;
+}
+
+.block {
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  background: #fdfdfd;
+}
+
+.block button.delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 5;
+}
+
+/* Row template styling */
+.row-block {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 2px dashed #6c757d;
+  background: #e9ecef;
+}
+
+.dropzone {
+  min-height: 80px;
+  border: 1px dashed #ced4da;
+  background: #fff;
+  padding: 5px;
+}
+
+/* Output areas */
+#html-output, #json-output {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
