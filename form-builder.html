@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MyCMS – Form Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Global Styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <!-- Form Builder Styles -->
+  <link href="css/form-builder.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MyCMS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Create Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="builder.html">Page Builder</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="form-builder.html">Form Builder</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container mt-4">
+    <h2>Drag-and-Drop Form Builder</h2>
+
+    <!-- Editor -->
+    <div id="form-builder-container" class="panel"></div>
+
+    <!-- Controls -->
+    <div class="mb-3">
+      <button class="btn btn-primary" onclick="renderForm()">Render Form</button>
+      <button class="btn btn-success" onclick="exportFormJSON()">
+        Export JSON
+      </button>
+      <button class="btn btn-danger" onclick="exportFormHTML()">
+        Export HTML
+      </button>
+      <button class="btn btn-secondary" onclick="saveFormTemplate()">
+        Save Template
+      </button>
+      <button class="btn btn-secondary" onclick="loadFormTemplate()">
+        Load Template
+      </button>
+    </div>
+
+    <!-- Rendered Preview -->
+    <h4>Rendered Form</h4>
+    <div id="form-render-container" class="panel"></div>
+
+    <!-- JSON Output -->
+    <h4>Form JSON</h4>
+    <pre id="form-json-container" class="panel"></pre>
+
+    <!-- HTML Output -->
+    <h4>Form HTML</h4>
+    <pre id="form-html-container" class="panel"></pre>
+  </div>
+
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/formBuilder/dist/form-builder.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/formBuilder/dist/form-render.min.js"></script>
+  <!-- Global App Logic -->
+  <script src="js/app.js"></script>
+  <!-- Form Builder Logic -->
+  <script src="js/form-builder.js"></script>
+</body>
+</html>
