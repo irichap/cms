@@ -1,0 +1,44 @@
+/* form-builder-enhanced.css */
+body { padding-top: 56px; background: #f8f9fa; transition: background .3s; }
+body.dark { background: #1e1e2f; color: #ddd; }
+body.dark .panel   { background: #2a2a3a; color: #ddd; }
+body.dark .navbar  { background: #111; }
+body.dark .btn-outline-light { color: #fff; }
+
+.navbar .btn { transition: transform .2s; }
+.navbar .btn:hover { transform: scale(1.1); }
+
+.panel {
+  border: 1px solid #ced4da;
+  background: #fff;
+  padding: 10px;
+  border-radius: 0.25rem;
+  height: 300px;
+  overflow: auto;
+}
+
+#formeo-sidebar, .formeo-editor, #formeo-preview {
+  border: 1px solid #adb5bd;
+  border-radius: 0.25rem;
+  background: #fff;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+#formeo-sidebar { background: #f1f3f5; }
+#formeo-sidebar .formeo-controls { height: 100%; overflow-y: auto; }
+
+.formeo-editor { background: #fff; }
+
+#formeo-preview { padding: 15px; }
+
+button {
+  transition: background .2s, transform .2s;
+}
+button:hover { background: #0056b3; transform: translateY(-1px); }
+
+h2 { font-weight: 600; }
+
+@media (max-width: 767px) {
+  #formeo-sidebar, #formeo-preview { display: none; }
+}
